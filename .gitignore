@@ -15,9 +15,6 @@ dist/
 build/
 .vite/
 
-# ── Models (private - not for public repo) ───────────────
-backend/models/
-
 # ── Uploads (local dev images) ───────────────────────────
 backend/uploads/*
 !backend/uploads/.gitkeep
