@@ -233,19 +233,9 @@
 @media (max-width: 1024px) { .navLinks { display: none; } }
 @media (max-width: 768px) {
   .mobileMenuBtn { display: flex; }
-  .navLinks { display: none; }
-
-  /* सगळे action buttons hide कर */
-  .actionBtn { display: none; }
-
-  /* फक्त हे 3 दाखव — Search, Theme, Cart, Menu */
-  .actionBtn[aria-label="Search"],
-  .actionBtn[aria-label="Toggle theme"],
-  .actionBtn[aria-label="Cart"],
-  .mobileMenuBtn { display: flex; }
-
-  /* Wishlist link */
-  .actions > a { display: flex; }
+  .actionBtn:not(.mobileMenuBtn) { display: none; }
+  /* Keep cart and user */
+  .actions > a, .actions > button:nth-last-child(-n+3) { display: flex; }
 }
 @media (max-width: 480px) {
   .logo { font-size: 18px; }
