@@ -234,8 +234,9 @@
 @media (max-width: 768px) {
   .mobileMenuBtn { display: flex; }
   .actionBtn:not(.mobileMenuBtn) { display: none; }
-  /* Keep cart and user */
-  .actions > a, .actions > button:nth-last-child(-n+3) { display: flex; }
+  /* Keep search, theme, cart, menu */
+  .actions > button:nth-last-child(-n+4) { display: flex; }
+  .actions > a { display: flex; }
 }
 @media (max-width: 480px) {
   .logo { font-size: 18px; }
