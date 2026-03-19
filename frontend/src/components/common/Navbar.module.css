@@ -233,9 +233,18 @@
 @media (max-width: 1024px) { .navLinks { display: none; } }
 @media (max-width: 768px) {
   .mobileMenuBtn { display: flex; }
-  .actionBtn:not(.mobileMenuBtn) { display: none; }
-  /* Keep search, theme, cart, menu */
-  .actions > button:nth-last-child(-n+4) { display: flex; }
+  .navLinks { display: none; }
+
+  /* सगळे action buttons hide कर */
+  .actionBtn { display: none; }
+
+  /* फक्त हे 3 दाखव — Search, Theme, Cart, Menu */
+  .actionBtn[aria-label="Search"],
+  .actionBtn[aria-label="Toggle theme"],
+  .actionBtn[aria-label="Cart"],
+  .mobileMenuBtn { display: flex; }
+
+  /* Wishlist link */
   .actions > a { display: flex; }
 }
 @media (max-width: 480px) {
