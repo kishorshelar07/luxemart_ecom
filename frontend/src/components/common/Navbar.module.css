@@ -231,14 +231,29 @@
 .mobileDivider { height: 1px; background: var(--border-subtle); margin: 12px 0; }
 
 @media (max-width: 1024px) { .navLinks { display: none; } }
+
 @media (max-width: 768px) {
+  .navLinks { display: none; }
+
+  /* सगळे action buttons दाखव */
+  .actionBtn { display: flex; }
   .mobileMenuBtn { display: flex; }
-  .actionBtn:not(.mobileMenuBtn) { display: none; }
-  /* Keep cart and user */
-  .actions > a, .actions > button:nth-last-child(-n+3) { display: flex; }
-}
-@media (max-width: 480px) {
+
+  /* gap कमी कर जेणेकरून overflow होणार नाही */
+  .actions { gap: 0px; }
+  .navInner { gap: 0px; }
+
+  /* logo छोटा कर */
   .logo { font-size: 18px; }
+
+  /* user avatar छोटा */
+  .userAvatar { padding: 3px 6px 3px 3px; }
+  .userAvatar img { width: 24px; height: 24px; }
+}
+
+@media (max-width: 480px) {
+  .logo { font-size: 16px; }
+  .actions { gap: 0px; }
 }
 
 /* Main content offset */
